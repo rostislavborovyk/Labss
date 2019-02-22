@@ -6,20 +6,21 @@ public class lab_1 {
 //    С5 = 5  +
 //    С7 = 6  double
     public static void main(String[] args) {
+        int c = 1;
         double S = 0;
         int a = 2;
         int n = 3;
         int b = 2;
         int m = 3;
-        if (a > 1) {
+        if (c >= a && c <= n) {
+            System.out.println("Division by zero");
+        } else {
             for (double i = a; i <= n; i++) {
                 for (double j = b; j <= m; j++) {
-                    S += (float) (i + j) / (i - 1);
+                    S += (float) (i + j) / (i - c);
                 }
             }
-            System.out.println(S);
-        } else {
-            System.out.println("Division by zero");
+            System.out.println("Result is: " + S);
         }
     }
 }
