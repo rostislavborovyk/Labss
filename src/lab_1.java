@@ -6,12 +6,12 @@ public class lab_1 {
 //    С5 = 5  +
 //    С7 = 6  double
     public static void main(String[] args) {
-        int c = 1;
+        final int c = 1;
+        final int a = 2;
+        final int n = 3;
+        final int b = 2;
+        final int m = 3;
         double S = 0;
-        int a = 2;
-        int n = 3;
-        int b = 2;
-        int m = 3;
         if (c >= a && c <= n) {
             System.out.println("Division by zero");
         } else {
