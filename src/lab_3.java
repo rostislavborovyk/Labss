@@ -2,6 +2,8 @@ import java.util.Arrays;
 
 public class lab_3 {
     public static void main(String[] args) {
+        // C3  = 1  (StringBuffer)
+        // C17 = 9  Задано текст та масив слів. Підрахувати у скількох реченнях зустрічається кожне слово масиву.
         StringBuffer str_buffer = new StringBuffer("Слово слово точка. Буква слово - слово точка. Точка.");
         String[] words = {"Слово","Буква","Точка","Кома"};
         System.out.println("String: " + str_buffer);
