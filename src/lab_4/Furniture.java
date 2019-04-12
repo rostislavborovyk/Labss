@@ -53,4 +53,5 @@ public class Furniture {
      void setOrigin(String origin){
         this.origin = origin;
     }
-}
+
+    }

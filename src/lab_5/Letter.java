@@ -1,8 +1,9 @@
 package lab_5;
 
-public class Letter {
+class Letter {
     private char letterSymbol;
-    public Letter(char letterSymbol){
+
+    Letter(char letterSymbol){
         this.letterSymbol = letterSymbol;
 //        System.out.print(letterSymbol);
     }

@@ -2,10 +2,10 @@ package lab_5;
 import java.util.Arrays;
 
 
-public class Text {
+class Text {
     private Sentence[] sentences;
 
-    public Text(String textString) {
+    Text(String textString) {
         String[] splited = textString.split("(?<=[.!?])");
         sentences = new Sentence[splited.length];
         for (int i = 0; i < splited.length; i++) {
@@ -22,7 +22,7 @@ public class Text {
 //            }
 //        }
 //    }
-    public void getWordsCount(String word){
+    void getWordsCount(String word){
         int count = 0;
         for (int i = 0; i < sentences.length; i++) {
             String [] wordsInSentence = sentences[i].getWordFromSentence();
