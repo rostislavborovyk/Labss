@@ -3,35 +3,27 @@ import java.util.Arrays;
 
 
 class Text {
-    private Sentence[] sentences;
+    Sentence[] sentences;
 
     Text(String textString) {
         String[] splited = textString.split("(?<=[.!?])");
-        sentences = new Sentence[splited.length];
+        this.sentences = new Sentence[splited.length];
         for (int i = 0; i < splited.length; i++) {
             sentences[i] = new Sentence(splited[i]);
-            System.out.println(sentences[i]);
+            sentences[i].printSentence();
         }
     }
-//    private String[] allWords(){
-//        String[] words;
-//        for (int i = 0; i < sentences.length; i++) {
-//            String sentence = sentences[i];
-//            for (int j = 0; j < sentences[i].length; j++) {
-//
-//            }
-//        }
-//    }
-    void getWordsCount(String word){
-        int count = 0;
+
+    int inHowManySentences(String word){
+        short counter = 0;
         for (int i = 0; i < sentences.length; i++) {
-            String [] wordsInSentence = sentences[i].getWordFromSentence();
-            if (Arrays.asList(wordsInSentence).contains(word.toLowerCase())){
-                count++;
+            if (sentences[i].isWordInSentence(word)){
+                counter++;
             }
         }
-        System.out.println("Word " + word + " is in " + count +" sentences");
+        return counter;
 
     }
+
 
 }

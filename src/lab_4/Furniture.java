@@ -27,7 +27,7 @@ public class Furniture {
     }
 
     int getCost(){
-        return this.cost;
+        return cost;
     }
     public void setCost(int cost){
         this.cost = cost;

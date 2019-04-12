@@ -3,27 +3,35 @@ package lab_5;
 public class Sentence {
 
     private String sentence;
-    private String[] wordsInSentence;
+    public Word[] words;
 
     Sentence(String sentenceString) {
         this.sentence = sentenceString;
-        this.wordsInSentence = sentenceString.split("(?=[ " +
-                Punctuation.punctuationSymbols +
-                "])| ");
-        Word[] words = new Word[wordsInSentence.length];
+
+        String[] wordsInSentence = sentenceString.split("(?=[ !?,.:;])| ");
+        words = new Word[wordsInSentence.length];
         for (int i = 0; i < wordsInSentence.length; i++) {
             words[i] = new Word(wordsInSentence[i]);
         }
 
+
     }
-    public String toString(){
-        return sentence;
-    }
-    String[] getWordFromSentence(){
-        for (int i = 0; i < wordsInSentence.length; i++) {
-            wordsInSentence[i] = wordsInSentence[i].replaceAll("\\s", "");
+    void printSentence (){
+        for (int i = 0; i < words.length; i++) {
+            System.out.print(words[i]);
         }
-        return wordsInSentence;
+        System.out.print("\n");
+    }
+
+    boolean isWordInSentence(String word){
+        boolean flag = false;
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].compareWithWord(word) == 0) {
+                flag = true;
+            }
+
+        }
+        return flag;
     }
 
 }

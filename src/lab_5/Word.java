@@ -14,7 +14,15 @@ public class Word {
 
 
     }
+    @Override
     public String toString(){
         return word;
+    }
+
+
+    int compareWithWord(String wordFromList){
+
+        int res = wordFromList.compareTo(word.replaceAll("\\s", ""));
+        return res;
     }
 }
