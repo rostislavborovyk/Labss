@@ -3,7 +3,7 @@ package lab_5;
 public class Sentence {
 
     private String sentence;
-    public Word[] words;
+    private Word[] words;
 
     Sentence(String sentenceString) {
         this.sentence = sentenceString;
@@ -17,7 +17,8 @@ public class Sentence {
 
     }
     void printSentence (){
-        for (int i = 0; i < words.length; i++) {
+        words[0] = words[0].delSpaceInTheStart();
+        for (int i =0; i < words.length; i++) {
             System.out.print(words[i]);
         }
         System.out.print("\n");

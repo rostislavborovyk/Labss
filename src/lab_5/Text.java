@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 
 class Text {
-    Sentence[] sentences;
+    private Sentence[] sentences;
 
     Text(String textString) {
         String[] splited = textString.split("(?<=[.!?])");

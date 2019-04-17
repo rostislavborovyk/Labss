@@ -19,6 +19,21 @@ public class Word {
         return word;
     }
 
+    Word delSpaceInTheStart(){
+        char[] newWord;
+        char[] charsOfWord = word.toCharArray();
+        if (charsOfWord[0] == ' '){
+            newWord = new char[charsOfWord.length-1];
+            for (int i = 0; i < newWord.length; i++) {
+                newWord[i] = charsOfWord[i+1];
+            }
+            String str = new String(newWord);
+            Word res = new Word(str);
+
+            return res;
+        }
+        return new Word(word);
+    }
 
     int compareWithWord(String wordFromList){
 

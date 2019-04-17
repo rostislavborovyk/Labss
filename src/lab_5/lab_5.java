@@ -11,9 +11,11 @@ public class lab_5 {
                 " erat risus. Aliquam euismod massa eget convallis ferm" +
                 "entum. Nam sit amet ultricies tortor, ut eleifend diam.");
 
+        System.out.println("-----------------------------");
+
         for (int i = 0; i < words.length; i++) {
             int counter = text.inHowManySentences(words[i]);
-            System.out.println("Word " + words[i] + " is in " + counter + " sentences");
+            System.out.println("Word " + words[i] + " is in " + counter + " sentences.");
         }
 
     }
