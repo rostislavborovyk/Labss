@@ -42,7 +42,7 @@ public class Bouquet {
         }
     }
     public void sortWithFreshness(){
-        Arrays.sort(flowers, new ComparatorByName());
+        Arrays.sort(flowers, new ComparatorByFreshness());
     }
 
 }

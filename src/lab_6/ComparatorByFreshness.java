@@ -3,7 +3,7 @@ import java.util.Comparator;
 
 
 
-public class ComparatorByName implements Comparator<Flower> {
+public class ComparatorByFreshness implements Comparator<Flower> {
 
     @Override
     public int compare(Flower o1, Flower o2) {
