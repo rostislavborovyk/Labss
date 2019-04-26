@@ -24,6 +24,21 @@ public class Bouquet {
             System.out.println("Bouquet size is exceeded!");
         }
     }
+    public void addTropicalFlower(int lenOfFlower, String nameOfFlower,int daysFromCut, String origin){
+        if (counter < numOfFlowers){
+            flowers[counter++] = new TropicalFlower(lenOfFlower, nameOfFlower, daysFromCut, origin);
+        }else {
+            System.out.println("Bouquet size is exceeded!");
+        }
+    }
+    public void addGreenHouseFlower(int lenOfFlower, String nameOfFlower,int daysFromCut, String origin){
+        if (counter < numOfFlowers){
+            flowers[counter++] = new GreenHouseFlower(lenOfFlower, nameOfFlower, daysFromCut, origin);
+        }else {
+            System.out.println("Bouquet size is exceeded!");
+        }
+    }
+
 
     @Override
     public String toString(){
