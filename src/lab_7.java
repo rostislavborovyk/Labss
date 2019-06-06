@@ -49,8 +49,14 @@ public class lab_7 {
         for (Bouquet bouquet : arr2) {
             System.out.println(bouquet);
         }
+        bs.clear();
+        bs = new BouquetSet();
+        System.out.println("adding bouquet");
 
-
+        bs.add(bouquet1);
+        for (Bouquet bouquet : bs) {
+            System.out.println(bouquet);
+        }
     }
 }
 

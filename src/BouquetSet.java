@@ -101,12 +101,11 @@ public class BouquetSet implements Set<Bouquet> {
 
     @Override
     public boolean contains(Object o) throws ClassCastException, NullPointerException {
-        if (this.size() == 0) {
-            throw new NullPointerException();
-        }
+
         if (!(o instanceof Bouquet)) {
             throw new ClassCastException();
         }
+        this.size();
         for (Bouquet bouquet : this) {
             if (bouquet.equals(o)) {
                 return true;
@@ -265,8 +264,22 @@ public class BouquetSet implements Set<Bouquet> {
             System.out.println("Already in collection");
             return true;
         }
-        this.getTail().setNext(new Node(bouquet));
-        this.setSize(this.size() + 1);
-        return true;
+       this.setSize(this.size() + 1);
+        try {
+            Node prev, next;
+            prev = this.getTail();
+            this.setHead(prev);
+            this.setSize(this.size() + 1);
+
+            next = new Node(bouquet);
+            prev.setNext(next);
+            prev = prev.getNext();
+
+            this.setTail(prev);
+            return true;
+        } catch (NullPointerException e){
+            System.out.println("");
+        }
+       return true;
     }
 }
